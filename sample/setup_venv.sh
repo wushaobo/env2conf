@@ -3,7 +3,7 @@
 set -e
 
 function prepare_virtualenv () {
-    pip install -i https://pypi.tuna.tsinghua.edu.cn/simple virtualenv
+    pip install virtualenv
 }
 
 function pip_install () {
@@ -16,10 +16,10 @@ function pip_install () {
 
     source ${venv_dir}/bin/activate
 
-    pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r ${requirement_txt}
+    pip install --extra-index-url=https://pypi.org/simple/ -r ${requirement_txt}
 
     deactivate
 }
 
 prepare_virtualenv
-pip_install venv requirements.txt
+pip_install ${1:-venv} requirements.txt

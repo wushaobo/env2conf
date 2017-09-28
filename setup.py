@@ -1,27 +1,28 @@
 
 from setuptools import setup
 
+version = '0.3'
+
 setup(
     name='env2conf',
-    version='0.1',
+    version=version,
     description='A tool for the config files generation from environment variables',
     author='Shaobo Wu',
     author_email='wushaobo.china@gmail.com',
     platforms='any',
     url='https://github.com/wushaobo/env2conf',
     license='MIT',
-    download_url='https://github.com/wushaobo/env2conf/archive/0.1.tar.gz',
+    download_url='https://github.com/wushaobo/env2conf/archive/{}.tar.gz'.format(version),
     keywords=['config', 'env'],
     scripts=['env2conf'],
     install_requires=[
-        'jinja2>=2.4,<3'
+        'jinja2>=2.7,<3'
     ],
     classifiers=[
         # How mature is this project? Common values are
-        #   3 - Alpha
         #   4 - Beta
         #   5 - Production/Stable
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 4 - Beta',
 
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
