@@ -2,3 +2,6 @@
 .DS_Store
 output
 venv
+
+dist
+*.egg-info
