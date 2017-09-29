@@ -1,6 +1,6 @@
 # env2conf
 
-The basic idea is to generate configuration files from some given templates using environment variables.
+The basic idea is to generate configuration files from some given template files ([Jinja template](http://jinja.pocoo.org/docs/latest/templates/)) using environment variables.
 
 Especially for the initialization of docker containers, it is better to pass in env vars rather than get the config files ready outside of the container.
 
